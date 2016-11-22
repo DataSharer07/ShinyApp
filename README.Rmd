@@ -1,0 +1,20 @@
+---
+output: html_document 
+runtime: shiny
+---
+## Developing Data Prododucts - CourseProject
+This is a submission for Coursera: Developing Data Products - Course Project November 2016
+
+## Fantasy QB Finder
+
+This application is developed to help (first time) fantasy football players select their fantasy QB. QB stats are from the 2016 season and were retrieved from [here](https://nathanbrixius.wordpress.com/category/fantasy-football).
+
+Football fantasy leagues have gained in popularity in recent years (see graph below). 
+
+Many people are now playing for the first time fantasy football. This app was created to scout/research your potential fantasy QB pick.
+You can select different performance measures that can be explored in a table and a scatter plot. Also, different leagues have different scoring settings. You can change fantasy scoring settings based on your league setup and see how it alters total fantasy points and QB rankings.
+
+
+The shiny app.R file (server.R and ui.R combined) and all other files are available at [GitHub](https://github.com/DataSharer07/ShinyApp).
+
+The project presentation is available [here](http://rpubs.com/DataSharer07/ShinyQBApp).

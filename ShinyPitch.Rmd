@@ -1,0 +1,47 @@
+---
+title: "Developing Data Products - Shiny App Pitch"
+author: "DataSharer07"
+date: "November 22, 2016"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Fantasy Football has gained Popularity
+
+```{r,echo=FALSE,message=FALSE}
+library(plotly)
+library(ggplot2)
+trend<-data.frame(year=c(2005:2011,2014:2016),players=c(12.6,18.0,19.4,29.9,28.4,32.0,35.9,41.5,56.8,57.4))
+p<-ggplot(trend, aes(x = year, y = players)) + geom_line()+geom_point(size=2)+labs(x="Year",y="Estimated Players in Million")+ggtitle("Estimated number of fantasy sports players in USA & Canada by year")+ annotate("text", label = "Data from http://fsta.org/research/industry-demographics/ (Nov, 2016)", x = 2010, y = 10, size = 4, colour = "black")
+(gg<-ggplotly(p))
+```
+
+## Most Important Fantasy Selection: QB!!!
+
+I want to help you research and select your potential fantasy QB selection.
+The data used in this project includes QB performance from the 2016 season and was retrieved from [here](https://nathanbrixius.wordpress.com/category/fantasy-football/).
+
+The app allows you to explore different QB measures. The measures that you selected are illustrated in a table that displays the top QBs and an interactive plot.
+
+## Adjust Fantasy Points based on your League Setup
+
+Every league has the opportunity to customize the scoring of each player.With my app you can adjust 
+
+- Passing TD Score
+- Passing Yards Score
+- Rushing TD Score
+- Rushing Yards Score
+- Lost Fumble Score
+- Interception Score
+
+Note: 2-pt converisons were not included in the data.
+
+## Did you find your Fantasy QB?
+
+If you did not, the app can be found [here](https://datasharer07.shinyapps.io/fantasyqb2016/).
+
+Now, go win your league(s)!!!
